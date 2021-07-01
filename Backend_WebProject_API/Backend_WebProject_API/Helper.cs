@@ -10,7 +10,12 @@ using Microsoft.Net.Http.Headers;
 namespace Backend_WebProject_API
 {
     public static class Helper
+
+
     {
+        private static List<TodoItemModel> todoItemModels = new List<TodoItemModel>();
+
+
         private static List<ApplicationUserModel> usersList = new List<ApplicationUserModel>();
         private static List<String> usersUUIDList = new List<String>();
 
@@ -62,6 +67,37 @@ namespace Backend_WebProject_API
 
 
         }
+
+
+        public static void addToDoTaskInList(TodoItemModel todoItemModel)
+        {
+            todoItemModels.Add(todoItemModel);
+        }
+
+
+        public static List<TodoItemModel> getAllToDoTaskInList(String UUID)
+        {
+
+             List<TodoItemModel> filteredtodoItemModels = new List<TodoItemModel>();
+
+            foreach (TodoItemModel Task in todoItemModels)
+            {
+                if(Task.UUID == UUID)
+                {
+                    filteredtodoItemModels.Add(Task);
+                }
+
+            }
+
+            return filteredtodoItemModels;
+
+
+        }
+
+
+        
+
+    
 
 
     }

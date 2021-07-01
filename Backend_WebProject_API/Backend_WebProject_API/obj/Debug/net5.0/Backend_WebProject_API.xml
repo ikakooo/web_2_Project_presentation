@@ -4,5 +4,19 @@
         <name>Backend_WebProject_API</name>
     </assembly>
     <members>
+        <member name="M:Backend_WebProject_API.Controllers.AuthController.Login(Backend_WebProject_API.Models.LoginModel)">
+            <summary>
+            მომხმარებლის ავტორიზაცია
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Backend_WebProject_API.Controllers.AuthController.Register(Backend_WebProject_API.Models.ApplicationUserModel)">
+            <summary>
+            მომხმარებლის რეგისტრაცია
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
