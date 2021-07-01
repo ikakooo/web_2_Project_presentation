@@ -1,6 +1,7 @@
 ﻿using Backend_WebProject_API.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Microsoft.Net.Http.Headers;
 using System;
 using System.Collections.Generic;
@@ -15,15 +16,29 @@ namespace Backend_WebProject_API.Controllers
 {
     public class AuthController : Controller
     {
+        private readonly ILogger<AuthController> _logger;
+
+        public AuthController(ILogger<AuthController> logger)
+        {
+            _logger = logger;
+        }
+
+
         private const string pathLogin = "Auth/Login";
         private const string pathRegister = "Auth/Register";
-        private List<ApplicationUserModel> usersList = new List<ApplicationUserModel>();
-        private List<String> usersUUIDList = new List<String>();
+        
 
         public IActionResult Index()
         {
             return View();
         }
+
+
+        /// <summary>
+        /// მომხმარებლის ავტორიზაცია
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
 
         [HttpPost]
         [Route(pathLogin)]
@@ -31,19 +46,37 @@ namespace Backend_WebProject_API.Controllers
         {
 
 
-            anscriptUsernameAndPassword(model);
-
-            try {
-                var fnj = Int64.Parse(i);
-                return Ok("gamovidaasajhdasjhdakjdh: " + i);
-               
-            }
-            catch (Exception ex)
+            if (Helper.isUserLoggedIn(Helper.anscriptUsernameAndPassword(model)))
             {
-                return BadRequest("can not parce to int");
+                // set Cookie
+
+                CookieOptions option = new CookieOptions();
+
+                option.Expires = DateTime.Now.AddMinutes(15);
+
+                Response.Cookies.Append("session-id", Helper.anscriptUsernameAndPassword(model), option);
+
+
+
+
+                return Ok("Autorithed: " + model);
             }
+            else
+            {
+                return Unauthorized("User is not loggged");
+            }
+
+           
         }
 
+
+
+
+        /// <summary>
+        /// მომხმარებლის რეგისტრაცია
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route(pathRegister)]
         public ActionResult Register([FromBody] ApplicationUserModel model)
@@ -51,26 +84,29 @@ namespace Backend_WebProject_API.Controllers
             
             if (Helper.IsValidEmail(model.Email) && model.FullName!=null && model.Password!=null && model.UserName!=null)
             {
-                usersList.Add(model);
-                anscriptUsernameAndPassword(new LoginModel(){
-                    UserName = model.UserName,
-                    Password = model.Password
 
-                });
+                Helper.registerUserIn(model);
+               
+        
 
 
 
                 // set Cookie
 
                 CookieOptions option = new CookieOptions();
-                
+
                 option.Expires = DateTime.Now.AddMinutes(15);
 
-                Response.Cookies.Append(" df ", "edeed", option);
+                Response.Cookies.Append("session-id", Helper.anscriptUsernameAndPassword(new LoginModel()
+                {
+                    UserName = model.UserName,
+                    Password = model.Password
 
+                }), option);
 
+               // _logger.LogInformation(usersUUIDList.ToString());
 
-                return Ok();
+                return Ok("Register Successfully");
             }
             else
             {
@@ -80,23 +116,12 @@ namespace Backend_WebProject_API.Controllers
 
 
 
-        private string anscriptUsernameAndPassword(LoginModel UsernameAndPassword)
-        {
-            const string salt = "ewufbydiwyuabdwnbdjgaedbjaqpoweqweuru3orhsdsduwerhndfsnncxz558023434509348090312dsjioflasxxkjawdjwed28939ri2t5y75therw8029340223u44";
-           
-                char[] characters = (UsernameAndPassword.Password+ UsernameAndPassword.Password+ salt).ToArray();
-                List<char> newcharacters = new List<char>();
-                Array.Sort(characters);
-
-            for (int i =0; i<128;i++)
-            {
-                newcharacters.Add(characters[i]);
-            }
 
 
-                return new string(newcharacters.ToArray());
-         
-        }
+
+
+
+        
 
 
 

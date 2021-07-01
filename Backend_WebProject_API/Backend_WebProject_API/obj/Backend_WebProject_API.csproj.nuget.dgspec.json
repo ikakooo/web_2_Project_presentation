@@ -1,31 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "\\\\Mac\\Home\\Desktop\\CU\\web_2_Project_presentation\\Backend_WebProject_API\\Backend_WebProject_API\\Backend_WebProject_API.csproj": {}
+    "/Users/tbc/Desktop/CU/web_2_Project_presentation/Backend_WebProject_API/Backend_WebProject_API/Backend_WebProject_API.csproj": {}
   },
   "projects": {
-    "\\\\Mac\\Home\\Desktop\\CU\\web_2_Project_presentation\\Backend_WebProject_API\\Backend_WebProject_API\\Backend_WebProject_API.csproj": {
+    "/Users/tbc/Desktop/CU/web_2_Project_presentation/Backend_WebProject_API/Backend_WebProject_API/Backend_WebProject_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\Mac\\Home\\Desktop\\CU\\web_2_Project_presentation\\Backend_WebProject_API\\Backend_WebProject_API\\Backend_WebProject_API.csproj",
+        "projectUniqueName": "/Users/tbc/Desktop/CU/web_2_Project_presentation/Backend_WebProject_API/Backend_WebProject_API/Backend_WebProject_API.csproj",
         "projectName": "Backend_WebProject_API",
-        "projectPath": "\\\\Mac\\Home\\Desktop\\CU\\web_2_Project_presentation\\Backend_WebProject_API\\Backend_WebProject_API\\Backend_WebProject_API.csproj",
-        "packagesPath": "C:\\Users\\tbc\\.nuget\\packages\\",
-        "outputPath": "\\\\Mac\\Home\\Desktop\\CU\\web_2_Project_presentation\\Backend_WebProject_API\\Backend_WebProject_API\\obj\\",
+        "projectPath": "/Users/tbc/Desktop/CU/web_2_Project_presentation/Backend_WebProject_API/Backend_WebProject_API/Backend_WebProject_API.csproj",
+        "packagesPath": "/Users/tbc/.nuget/packages/",
+        "outputPath": "/Users/tbc/Desktop/CU/web_2_Project_presentation/Backend_WebProject_API/Backend_WebProject_API/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\tbc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/tbc/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,10 +41,6 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Authentication.Cookies": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
               "version": "[2.2.2, )"
@@ -87,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.301/RuntimeIdentifierGraph.json"
         }
       }
     }

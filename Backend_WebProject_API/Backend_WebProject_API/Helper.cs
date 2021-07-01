@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Text.RegularExpressions;
+using Backend_WebProject_API.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Net.Http.Headers;
 
@@ -8,7 +11,8 @@ namespace Backend_WebProject_API
 {
     public static class Helper
     {
-
+        private static List<ApplicationUserModel> usersList = new List<ApplicationUserModel>();
+        private static List<String> usersUUIDList = new List<String>();
 
         public static bool  IsValidEmail(string strIn)
         {
@@ -17,38 +21,48 @@ namespace Backend_WebProject_API
         }
 
 
-        /// <summary>  
-        /// set the cookie  
-        /// </summary>  
-        /// <param name="key">key (unique indentifier)</param>  
-        /// <param name="value">value to store in cookie object</param>  
-        /// <param name="expireTime">expiration time</param>  
-        public static void Set(string key, string value, int? expireTime)
+        public static string anscriptUsernameAndPassword(LoginModel UsernameAndPassword)
         {
-            HttpResponseMessage respMessage = new HttpResponseMessage();
-            CookieOptions option = new CookieOptions();
+            const string salt = "ewufbydiwyuabdwnbdjgaedbjaqpoweqweuru3orhsdsdgyuyuyubbhjbhjjnjnplpwqqezuwerhndfsnncxz558dsjioflasxxkjawdjwed939ri2t5y75therw80";
 
-            if (expireTime.HasValue)
-                option.Expires = DateTime.Now.AddMinutes(expireTime.Value);
-            else
-                option.Expires = DateTime.Now.AddMilliseconds(10);
+            char[] characters = (UsernameAndPassword.UserName + UsernameAndPassword.Password + salt).ToArray();
+            List<char> newcharacters = new List<char>();
+            Array.Sort(characters);
 
-            respMessage.Cookies.Append(key, value, option);
+            for (int i = 0; i < 128; i++)
+            {
+                newcharacters.Add(characters[i]);
+            }
 
-           
+
+            return new string(newcharacters.ToArray());
+
         }
 
-        public static HttpResponseMessage Get222()
+        public static bool isUserLoggedIn(String UUID)
         {
-            var resp = new HttpResponseMessage();
-
-            var cookie = new CookieHeaderValue("session-id", "12345");
-            cookie.Expires = DateTimeOffset.Now.AddDays(1);
-            cookie.Domain = Request.RequestUri.Host;
-            cookie.Path = "/";
-
-            resp.Headers.AddCookies(new CookieHeaderValue[] { cookie });
-            return resp;
+            if (usersUUIDList.Contains(UUID))
+            {
+                return true;
+            }else
+            {
+                return false;
+            }
         }
+
+        public static void registerUserIn(ApplicationUserModel userInfo)
+        {
+
+            usersUUIDList.Add(anscriptUsernameAndPassword(new LoginModel()
+            {
+                UserName = userInfo.UserName,
+                Password = userInfo.Password
+
+            }));
+
+
+        }
+
+
     }
 }
