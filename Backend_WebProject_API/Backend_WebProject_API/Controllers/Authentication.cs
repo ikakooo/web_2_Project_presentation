@@ -5,6 +5,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Backend_WebProject_API.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
+using System.Text;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace Backend_WebProject_API.Controllers
 {
@@ -18,7 +24,7 @@ namespace Backend_WebProject_API.Controllers
         private SignInManager<ApplicationUser> _singInManager;
         private readonly ApplicationSettings _appSettings;
 
-        public ApplicationUserController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IOptions<ApplicationSettings> appSettings)
+        public Authentication(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IOptions<ApplicationSettings> appSettings)
         {
             _userManager = userManager;
             _singInManager = signInManager;
@@ -26,9 +32,16 @@ namespace Backend_WebProject_API.Controllers
         }
 
         [HttpPost]
+        [Route("avto")]
+        public ActionResult avto([FromBody] int i)
+        {
+            return Ok("gamovidaasajhdasjhdakjdh");
+        }
+
+        [HttpPost]
         [Route("Register")]
-        //POST : /api/ApplicationUser/Register
-        public async Task<Object> PostApplicationUser(ApplicationUserModel model)
+        //POST : /Authentication/ApplicationUser/Register
+        public async Task<Object> PostApplicationUser([FromBody] ApplicationUserModel model)
         {
             var applicationUser = new ApplicationUser()
             {
@@ -36,22 +49,22 @@ namespace Backend_WebProject_API.Controllers
                 Email = model.Email,
                 FullName = model.FullName
             };
+            return Ok();
+          //  try
+           // {
+          //      var result = await _userManager.CreateAsync(applicationUser, model.Password);
+          //      return Ok(result);
+          //  }
+          //  catch (Exception ex)
+           // {
 
-            try
-            {
-                var result = await _userManager.CreateAsync(applicationUser, model.Password);
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
+             //   return Ok();
+           // }
         }
 
         [HttpPost]
         [Route("Login")]
-        //POST : /api/ApplicationUser/Login
+        //POST : /Authentication/ApplicationUser/Login
         public async Task<IActionResult> Login(LoginModel model)
         {
             var user = await _userManager.FindByNameAsync(model.UserName);

@@ -10,5 +10,11 @@ namespace Backend_WebProject_API.Models
     {
         [Column(TypeName = "nvarchar(150)")]
         public string FullName { get; set; }
+        [Column(TypeName = "nvarchar(150)")]
+        public string UserName { get;  set; }
+        [Column(TypeName = "nvarchar(150)")]
+        public string Email { get;  set; }
+        [Column(TypeName = "nvarchar(150)")]
+        public object Id { get;  set; }
     }
 }

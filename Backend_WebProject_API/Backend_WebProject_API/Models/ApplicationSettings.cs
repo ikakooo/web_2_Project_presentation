@@ -7,5 +7,6 @@ namespace Backend_WebProject_API.Models
 {
     public class ApplicationSettings
     {
+        public string JWT_Secret { get; internal set; }
     }
 }
