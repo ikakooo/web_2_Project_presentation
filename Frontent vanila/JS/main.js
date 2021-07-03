@@ -6,7 +6,7 @@ var loginForm = document.getElementById('form')
 var modal = document.querySelector('.container-msg-modal')
 var modalContent = document.querySelectorAll('.container-modal-content')
 
-const loginURL = "https://127.0.0.1:5001/publish_Backend/Auth/Login"
+const loginURL = "https://127.0.0.1:5001/Auth/Login"
 const registerURL = "https://127.0.0.1:5001/Auth/Register"
 
 // only using default value for now
@@ -18,7 +18,7 @@ const myLogin = {
 requesGet()
 function requesGet() {
 
-    const url = 'https://127.0.0.1:5001/publish_Backend/getAllTodoTasks';
+    const url = 'https://127.0.0.1:5001/getAllTodoTasks';
 
 
     $.ajax({
@@ -30,7 +30,7 @@ function requesGet() {
             alert("Data Saved: " + msg);
         });
 }
-aJaxGetRequest()
+//aJaxGetRequest()
 
 function aJaxGetRequest() {
 

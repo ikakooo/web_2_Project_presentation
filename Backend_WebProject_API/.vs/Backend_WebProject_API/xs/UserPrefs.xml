@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{03A2C71E-DEBF-46F6-B3C4-6CBD5073B675}|Default">
   <MonoDevelop.Ide.ItemProperties.Backend__WebProject__API PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Backend_WebProject_API/Helper.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Backend_WebProject_API/Startup.cs">
     <Files>
-      <File FileName="Backend_WebProject_API/Controllers/AuthController.cs" Line="96" Column="60" />
+      <File FileName="Backend_WebProject_API/Controllers/AuthController.cs" Line="85" Column="1" />
       <File FileName="Backend_WebProject_API/Models/ApplicationUserModel.cs" />
-      <File FileName="Backend_WebProject_API/Helper.cs" Line="78" Column="43" />
-      <File FileName="Backend_WebProject_API/Program.cs" />
+      <File FileName="Backend_WebProject_API/Helper.cs" Line="65" Column="1" />
+      <File FileName="Backend_WebProject_API/Program.cs" Line="16" Column="1" />
       <File FileName="Backend_WebProject_API/Models/ApplicationSettings.cs" />
       <File FileName="Backend_WebProject_API/Controllers/WeatherForecastController.cs" />
       <File FileName="Backend_WebProject_API/appsettings.json" />
@@ -15,6 +15,7 @@
       <File FileName="Backend_WebProject_API/Models/TodoItemModel.cs" />
       <File FileName="Backend_WebProject_API/Models/ApplicationUser.cs" />
       <File FileName="Backend_WebProject_API/Models/LoginModel.cs" />
+      <File FileName="Backend_WebProject_API/Startup.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -30,7 +31,7 @@
                 <Node name="PublishProfiles" expanded="True" />
               </Node>
               <Node name="appsettings.json" expanded="True" />
-              <Node name="Helper.cs" selected="True" />
+              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
         </State>
