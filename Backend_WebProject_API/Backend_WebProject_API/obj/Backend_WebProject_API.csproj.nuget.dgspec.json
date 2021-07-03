@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/Users/tbc/Desktop/CU/web_2_Project_presentation/Backend_WebProject_API/Backend_WebProject_API/Backend_WebProject_API.csproj": {}
+    "/Users/tbc/Desktop/web_2_Project_presentation/Backend_WebProject_API/Backend_WebProject_API/Backend_WebProject_API.csproj": {}
   },
   "projects": {
-    "/Users/tbc/Desktop/CU/web_2_Project_presentation/Backend_WebProject_API/Backend_WebProject_API/Backend_WebProject_API.csproj": {
+    "/Users/tbc/Desktop/web_2_Project_presentation/Backend_WebProject_API/Backend_WebProject_API/Backend_WebProject_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tbc/Desktop/CU/web_2_Project_presentation/Backend_WebProject_API/Backend_WebProject_API/Backend_WebProject_API.csproj",
+        "projectUniqueName": "/Users/tbc/Desktop/web_2_Project_presentation/Backend_WebProject_API/Backend_WebProject_API/Backend_WebProject_API.csproj",
         "projectName": "Backend_WebProject_API",
-        "projectPath": "/Users/tbc/Desktop/CU/web_2_Project_presentation/Backend_WebProject_API/Backend_WebProject_API/Backend_WebProject_API.csproj",
+        "projectPath": "/Users/tbc/Desktop/web_2_Project_presentation/Backend_WebProject_API/Backend_WebProject_API/Backend_WebProject_API.csproj",
         "packagesPath": "/Users/tbc/.nuget/packages/",
-        "outputPath": "/Users/tbc/Desktop/CU/web_2_Project_presentation/Backend_WebProject_API/Backend_WebProject_API/obj/",
+        "outputPath": "/Users/tbc/Desktop/web_2_Project_presentation/Backend_WebProject_API/Backend_WebProject_API/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/tbc/.config/NuGet/NuGet.Config"
+          "/Users/tbc/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"

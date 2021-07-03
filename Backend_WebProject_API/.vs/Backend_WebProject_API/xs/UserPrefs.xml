@@ -3,18 +3,18 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Backend_WebProject_API/Helper.cs">
     <Files>
       <File FileName="Backend_WebProject_API/Controllers/AuthController.cs" Line="96" Column="60" />
-      <File FileName="Backend_WebProject_API/Models/ApplicationUserModel.cs" Line="13" Column="45" />
+      <File FileName="Backend_WebProject_API/Models/ApplicationUserModel.cs" />
       <File FileName="Backend_WebProject_API/Helper.cs" Line="78" Column="43" />
-      <File FileName="Backend_WebProject_API/Program.cs" Line="16" Column="1" />
-      <File FileName="Backend_WebProject_API/Models/ApplicationSettings.cs" Line="1" Column="1" />
-      <File FileName="Backend_WebProject_API/Controllers/WeatherForecastController.cs" Line="42" Column="1" />
-      <File FileName="Backend_WebProject_API/appsettings.json" Line="11" Column="1" />
-      <File FileName="Backend_WebProject_API/Properties/launchSettings.json" Line="2" Column="64" />
-      <File FileName="Backend_WebProject_API/Properties/PublishProfiles/FolderProfile.pubxml" Line="21" Column="11" />
-      <File FileName="Backend_WebProject_API/Controllers/TodoListController.cs" Line="50" Column="46" />
-      <File FileName="Backend_WebProject_API/Models/TodoItemModel.cs" Line="8" Column="24" />
-      <File FileName="Backend_WebProject_API/Models/ApplicationUser.cs" Line="19" Column="6" />
-      <File FileName="Backend_WebProject_API/Models/LoginModel.cs" Line="8" Column="28" />
+      <File FileName="Backend_WebProject_API/Program.cs" />
+      <File FileName="Backend_WebProject_API/Models/ApplicationSettings.cs" />
+      <File FileName="Backend_WebProject_API/Controllers/WeatherForecastController.cs" />
+      <File FileName="Backend_WebProject_API/appsettings.json" />
+      <File FileName="Backend_WebProject_API/Properties/launchSettings.json" />
+      <File FileName="Backend_WebProject_API/Properties/PublishProfiles/FolderProfile.pubxml" />
+      <File FileName="Backend_WebProject_API/Controllers/TodoListController.cs" />
+      <File FileName="Backend_WebProject_API/Models/TodoItemModel.cs" />
+      <File FileName="Backend_WebProject_API/Models/ApplicationUser.cs" />
+      <File FileName="Backend_WebProject_API/Models/LoginModel.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -34,9 +34,6 @@
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

@@ -1,0 +1,16 @@
+/Users/tbc/Desktop/web_2_Project_presentation/publish Backend/appsettings.Development.json
+/Users/tbc/Desktop/web_2_Project_presentation/publish Backend/appsettings.json
+/Users/tbc/Desktop/web_2_Project_presentation/publish Backend/Backend_WebProject_API.dll
+/Users/tbc/Desktop/web_2_Project_presentation/publish Backend/Backend_WebProject_API.deps.json
+/Users/tbc/Desktop/web_2_Project_presentation/publish Backend/Backend_WebProject_API.runtimeconfig.json
+/Users/tbc/Desktop/web_2_Project_presentation/publish Backend/Backend_WebProject_API.pdb
+/Users/tbc/Desktop/web_2_Project_presentation/publish Backend/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/tbc/Desktop/web_2_Project_presentation/publish Backend/Microsoft.IdentityModel.Logging.dll
+/Users/tbc/Desktop/web_2_Project_presentation/publish Backend/Microsoft.IdentityModel.Tokens.dll
+/Users/tbc/Desktop/web_2_Project_presentation/publish Backend/Microsoft.OpenApi.dll
+/Users/tbc/Desktop/web_2_Project_presentation/publish Backend/Swashbuckle.AspNetCore.Swagger.dll
+/Users/tbc/Desktop/web_2_Project_presentation/publish Backend/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/tbc/Desktop/web_2_Project_presentation/publish Backend/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/tbc/Desktop/web_2_Project_presentation/publish Backend/System.IdentityModel.Tokens.Jwt.dll
+/Users/tbc/Desktop/web_2_Project_presentation/publish Backend/System.Text.Json.dll
+/Users/tbc/Desktop/web_2_Project_presentation/publish Backend/Backend_WebProject_API.xml

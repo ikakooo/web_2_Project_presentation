@@ -8,7 +8,38 @@
 </head>
 
 <body>
-   
+
+    <div class="container">
+        <!-- it will become a model-->
+        <div class="container-msg-modal">
+            <div class="container-modal-content--success container-modal-content">
+              <span>Welcome!</span>
+          </div> <!-- redirect fn does not esist-->
+            <div class="container-modal-content--error container-modal-content"><span>Failed Login</span></div>
+        </div>
+  
+        <!-- -->
+        <form action="" id="form">
+            <div class="container-form-userName container-form-input">
+                <label for="userName">User name</label>
+                <input type="text" placeholder="User Name" name="userName" required>
+            </div>
+            <div class="container-form-userPassword container-form-input">
+                <label for="userPasswrod">Password</label>
+                <input type="password" placeholder="User Password" name="userPassword" onfocus="this.value=''" required>
+            </div>
+            <button type="submit" class="js-form-btn">Login</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <div class="icon">---</div>
+        <div class="temp">-°C</div>
+        <div class="summary">----</div>
+        <div class="location"></div>
+      </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="JS/main.js" type="text/javascript"> </script>
+    
 </body>
 </html>
